@@ -74,12 +74,12 @@ int UtPod::removeSong(Song const &song){
 void UtPod::shuffle(){
     int numSongs = getNumSongs();
     if(numSongs == 0 || numSongs == 1) return;
+    unsigned int currentTime = (unsigned) time(0);
+    srand(currentTime);
     for(int i = 0; i < numSongs; i++){
         SongNode* tempPtr1 = songs;
         SongNode* tempPtr2 = songs;
 
-        unsigned int currentTime = (unsigned) time(0);
-        srand(currentTime);
         int num1 = rand() % numSongs + 1;
         int num2 = rand() % numSongs + 1;
 
