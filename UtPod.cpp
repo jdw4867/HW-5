@@ -36,6 +36,7 @@ UtPod::UtPod(int size) {
 }
 
 int UtPod::addSong(Song const &song) {
+    if(song.getTitle() == "" || song.getArtist() == "" || song.getSize() == 0) return NO_MEMORY;
     if(song.getSize() <= getRemainingMemory()){
         SongNode *temp = new SongNode;
         temp->s = song;

@@ -84,16 +84,17 @@ int main(int argc, char *argv[]) {
     result = t.addSong(e3);
     Song e4("Deyonce", "Halo", 4);
     result = t.addSong(e4);
-    //Song e5("Heyonce", "Halo", 10);
-    //result = t.addSong(e5);
-    //Song e6("Beyonce", "Aalo", 10);
-    //result = t.addSong(e6);
-    //Song e7("Beyonce", "Balo", 10);
-    //result = t.addSong(e7);
-    //Song e8("Beyonce", "Halo", 50);
-    //result = t.addSong(e8);
-    //Song e9("Beyonce", "Halo", 34);
-    //result = t.addSong(e9);
+    Song e5("Heyonce", "Halo", 10);
+    result = t.addSong(e5);
+    Song e6("Beyonce", "Aalo", 10);
+    result = t.addSong(e6);
+    Song e7("Beyonce", "Balo", 10);
+    result = t.addSong(e7);
+    Song e8("Beyonce", "Halo", 50);
+    result = t.addSong(e8);
+    Song e9("Beyonce", "Halo", 34);
+    result = t.addSong(e9);
+
     cout << endl;
     t.showSongList();
     cout << endl;
@@ -101,8 +102,8 @@ int main(int argc, char *argv[]) {
     t.showSongList();
     cout << endl;
 
-  //  t.sortSongList();
-    //t.showSongList();
+    t.sortSongList();
+    t.showSongList();
 
 
 /*
