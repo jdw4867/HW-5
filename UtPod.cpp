@@ -112,13 +112,17 @@ void UtPod::sortSongList(){
     SongNode * tempPtr = songs;
     SongNode * incrPtr = songs;
     SongNode * lowest = songs;
-
-    for(int i = 0; i < getNumSongs(); i++){
+    int numSongs = getNumSongs();
+    for(int i = 0; i < numSongs; i++){
         lowest = incrPtr;
         tempPtr = incrPtr;
         while(tempPtr != NULL){
-            if(tempPtr->s < lowest->s) lowest = tempPtr;
-            tempPtr = tempPtr->next;
+            if(tempPtr->s < lowest->s) {
+                lowest = tempPtr;
+                tempPtr = tempPtr->next;
+            }else {
+                tempPtr = tempPtr->next;
+            }
         }
         Song temp = lowest->s;
         lowest->s = incrPtr->s;

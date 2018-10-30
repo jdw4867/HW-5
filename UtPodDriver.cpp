@@ -76,34 +76,42 @@ int main(int argc, char *argv[]) {
     t.showSongList();
 */
 
-    Song e1("Aeyonce", "Halo", 1);
+    Song e1("B", "H", 2);
     int result = t.addSong(e1);
-    Song e2("Beyonce", "Halo", 2);
+    Song e2("A", "B", 1);
     result = t.addSong(e2);
-    Song e3("Ceyonce", "Halo", 3);
+    Song e3("A", "H", 3);
     result = t.addSong(e3);
-    Song e4("Deyonce", "Halo", 4);
+    Song e4("D", "H", 4);
     result = t.addSong(e4);
-    Song e5("Heyonce", "Halo", 10);
+
+    Song e5("A", "H", 40);
+
     result = t.addSong(e5);
-    Song e6("Beyonce", "Aalo", 10);
+
+    Song e6("B", "A", 10);
     result = t.addSong(e6);
-    Song e7("Beyonce", "Balo", 10);
+    Song e7("B", "C", 10);
     result = t.addSong(e7);
-    Song e8("Beyonce", "Halo", 50);
+    Song e8("B", "Z", 50);
     result = t.addSong(e8);
-    Song e9("Beyonce", "Halo", 34);
+    Song e9("B", "A", 34);
     result = t.addSong(e9);
 
-    cout << endl;
     t.showSongList();
     cout << endl;
+
     t.shuffle();
     t.showSongList();
     cout << endl;
 
     t.sortSongList();
     t.showSongList();
+    cout << endl;
+
+    t.shuffle();
+    t.showSongList();
+    cout << endl;
 
 
 /*
