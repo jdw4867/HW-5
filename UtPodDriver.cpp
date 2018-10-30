@@ -1,12 +1,8 @@
 /* utPod_driver.cpp
-
  Driver for the UtPod that tests its functions.
-
  Written by Jonathan Walsh and Rainey Shah
  Last update 10/27/18
-
 */
-
 #include <ctime>
 #include <cstdlib>
 #include <iostream>
@@ -22,15 +18,12 @@ int main(int argc, char *argv[]) {
     Song s1("Beatles", "Hey Jude1", 1);
     int result = t.addSong(s1);
     cout << "add result = " << result << endl;
-
     Song s2("Beatles", "Hey Jude2", 2);
     result = t.addSong(s2);
     cout << "add result = " << result << endl;
-
     Song s3("Beatles", "Hey Jude3", 3);
     result = t.addSong(s3);
     cout << "add result = " << result << endl;
-
     Song s4("Beatles", "Hey Jude4", 4);
     result = t.addSong(s4);
     cout << "add result = " << result << endl;
@@ -48,17 +41,12 @@ int main(int argc, char *argv[]) {
     t.showSongList();
 
     cout << endl;
-
     t.shuffle();
-
     t.showSongList();
 
-    cout << endl;
-    cout << "--------------" << endl << "There should be no songs between the lines, because clearMemory is called" << endl;
+    cout << endl << "clearMemory() is called" << endl;
     t.clearMemory();
     t.showSongList();
-    cout << endl << "--------------" << endl;
-
 
     cout << endl << "The following is an additional set of tests with new songs" << endl;
     result = t.removeSong(s2);
@@ -67,7 +55,6 @@ int main(int argc, char *argv[]) {
     Song e1("A", "", 2);
     result = t.addSong(e1);
     cout << "add result = " << result << endl;
-    cout << "++++++++++++++++" << endl;
 
     Song e2("A", "B", 1);
     result = t.addSong(e2);
@@ -105,27 +92,24 @@ int main(int argc, char *argv[]) {
     t.sortSongList();
     t.showSongList();
 
-    cout << "---------------" << endl << "Memory is cleared again" << endl << "-----------------" << endl;
+    cout << endl << "Memory is cleared again" << endl;
     t.clearMemory();
-//tests added by rainey
-    //construct object
-    Song R1("ACDC", "Thunderstruck", 8);
-    //add to link list and check if it was successful
 
-//test multiple runs and make sure that only two songs shuffle (this works)
+//tests added by rainey
+    Song R1("ACDC", "Thunderstruck", 8);
     result = t.addSong(R1);
-    Song R2("Shakira", "Hips Dont Lie", 1);
+    Song R2("Shakira", "Hips Don't Lie", 1);
     result = t.addSong(R2);
     t.showSongList();
+
     cout << endl << "Below is two songs shuffled" << endl;
     t.shuffle();
     t.showSongList();
 
     cout << endl << "Below is the current song list" << endl;
     t.showSongList();
+
     cout << endl << "UtPod Remaining Memory = " << t.getRemainingMemory() << endl;
     cout << "Total UtPod Memory = " << t.getTotalMemory() << endl;
-
-
 
 }
