@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
     cout << "delete result = " << result << endl;
     t.showSongList();
 */
-
+/*
     Song e1("B", "H", 2);
     int result = t.addSong(e1);
     Song e2("A", "B", 1);
@@ -112,6 +112,25 @@ int main(int argc, char *argv[]) {
     t.shuffle();
     t.showSongList();
     cout << endl;
+*/
+//tests added by rainey
+    int result;
+    //construct object
+    Song R1("ACDC", "Thunderstruck", 8);
+    //add to link list and check if it was successful
+
+//test multiple runs and make sure that only two songs shuffle (this works)
+    result = t.addSong(R1);
+    Song R2("Shakira", "Hips Dont Lie", 1);
+    result = t.addSong(R2);
+    t.showSongList();
+    t.shuffle();
+    t.showSongList();
+
+
+
+
+
 
 
 /*
