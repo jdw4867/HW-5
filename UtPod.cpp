@@ -52,6 +52,11 @@ int UtPod::removeSong(Song const &song){
     SongNode* tempPtr = songs;
     SongNode* trail = songs;
     if(tempPtr == NULL) return NOT_FOUND;
+    if(tempPtr->s == song) {
+        songs = tempPtr->next;
+        delete tempPtr;
+        return SUCCESS;
+    }
     else{
         while(tempPtr != NULL){
             if(tempPtr->s == song){
